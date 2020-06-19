@@ -1,0 +1,147 @@
+:root {
+  --corPrimaria: #630e0a;
+  --corSecundaria: #f8c1c1;
+  --branco: #eee;
+  --preto: #222;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "bebas neue"; */
+  color: var(--branco);
+  line-height: 1.7;
+  padding: 30px;
+  font-family: "bebas neue", sans-serif;
+}
+
+header {
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  background-image: linear-gradient(
+      90deg,
+      rgba(99, 14, 10, 0.8) 0%,
+      rgba(153, 14, 8, 0.8) 100%
+    ),
+    url("./images/background-cover.jpg");
+  height: 95vh;
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.logo {
+  height: 70px;
+}
+
+.headline-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Lora", "Caveat", sans-serif;
+  text-transform: uppercase;
+}
+.headline-box h1 {
+  font-size: 53px;
+  letter-spacing: 15px;
+  color: var(--corSecundaria);
+  font-weight: 900;
+  animation: moveInLeft 1s;
+}
+
+.headline-box p {
+  font-size: 17px;
+  letter-spacing: 7px;
+  font-weight: 700;
+
+  animation: moveInRight 1s;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.botao {
+  margin-top: 60px;
+  text-align: center;
+}
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 15px 80px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 100px;
+  font-family: "bebas neue", sans-serif;
+  transition: all 0.2s;
+
+  animation: moveUp 1s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(100, 100, 100, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(100, 100, 100, 0.2);
+}
+
+.btn-headline {
+  background-color: var(--branco);
+  color: var(--corPrimaria);
+  font-size: 18px;
+}
