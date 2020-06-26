@@ -131,10 +131,6 @@ header {
   }
 }
 
-/* .botao {
-  margin-top: 60px;
-  text-align: center;
-} */
 .btn:link,
 .btn:visited {
   text-decoration: none;
@@ -143,11 +139,11 @@ header {
   display: inline-block;
   border-radius: 100px;
   font-family: "bebas neue", sans-serif;
-  transition: all 0.2s;
+  transition: all 500ms;
   position: relative;
 }
 .btn:hover {
-  transform: translateY(-3px);
+  transform: scale(1.1);
   box-shadow: 0 10px 20px rgba(100, 100, 100, 0.2);
 }
 .btn:active {
@@ -160,25 +156,6 @@ header {
   color: var(--branco);
   font-size: 18px;
   font-weight: 600;
-}
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.4s;
-}
-.btn-headline::after {
-  background-color: var(--corTerciaria);
-}
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
 }
 .btn-animado {
   animation: moveUp 1s ease-out 0.7s;
@@ -220,7 +197,7 @@ header {
   justify-content: space-around;
   align-items: center;
   padding-bottom: 20px;
-  margin: 0 50px;
+  margin: 0 50px 20px;
 }
 .container-beneficios ul li strong {
   text-align: center;
@@ -233,8 +210,10 @@ header {
 .container-beneficios ul li img {
   width: 10rem;
   margin-bottom: 10px;
-  color: black;
-  fill: currentColor;
+  transition: all 500ms;
+}
+.container-beneficios ul li img:hover {
+  transform: scale(1.1);
 }
 
 .container-beneficios ul li p {
