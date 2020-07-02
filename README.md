@@ -1,3 +1,3 @@
-# Landing page da Loja Maçã Mordida.
+# Landing page da loja Maçã Mordida.
 
-Um site simples utilizando apenas css/html com a apresentação da loja.
+Uma landing page simples utilizando apenas css/html com a apresentação da loja.
