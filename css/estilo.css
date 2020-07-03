@@ -14,7 +14,6 @@
 }
 
 body {
-  /* font-family: "bebas neue"; */
   color: var(--branco);
   line-height: 1.7;
   overflow-y: hidden;
@@ -41,7 +40,7 @@ header {
       rgba(99, 14, 10, 0.8) 0%,
       rgba(153, 14, 8, 0.8) 100%
     ),
-    url("./images/background-cover.jpg");
+    url("../images/background-cover.jpg");
   height: 100vh;
   position: relative;
   text-align: center;
@@ -158,11 +157,11 @@ header {
   font-weight: 600;
 }
 .btn-animado {
-  animation: moveUp 1s ease-out 0.7s;
+  animation: moveUp 1s ease-out 1.3s;
   animation-fill-mode: backwards;
 }
 
-/*Sessão 2 apresentação */
+/************************************Sessão 2 apresentação ********************************************************/
 
 .container-beneficios {
   padding: 0 7%;
@@ -233,17 +232,19 @@ header {
 }
 
 /*********************************** depoimentos ****************************************/
-
-.depoimentos-container {
+.testimonials-container {
   height: 100vh;
-  padding: 2% 10%;
-  background-color: var(--corSecundaria);
+  padding: 3% 10%;
+  background-color: var(--branco);
   color: var(--corPrimaria);
+}
+.testimonials-box {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 2% 0 0;
 }
-.depoimentos-item {
+.testimonials-item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -252,29 +253,29 @@ header {
   position: relative;
 }
 
-.balao {
+.baloon {
   color: var(--corPrimaria);
   height: 200px;
   width: 250px;
   padding: 20px;
   border-radius: 3px;
   position: relative;
-  border-color: #eee;
-  background-color: #eee;
+  border-color: var(--corSecundaria);
+  background-color: var(--corSecundaria);
   box-shadow: 0 30px 40px 0 rgba(0, 0, 0, 0.1);
   display: flex;
   /* align-items: center; */
   justify-content: center;
 }
 
-.balao p {
+.baloon p {
   font-style: italic;
   font-size: 1.1rem;
   line-height: 2;
   letter-spacing: 1px;
   font-family: "lora";
 }
-.balao:after {
+.baloon:after {
   /* transform: translateY(20px); */
   content: "";
   position: absolute;
@@ -282,10 +283,10 @@ header {
   right: 30%;
   border-width: 30px 30px 0 0;
   border-style: solid;
-  border-color: #eee transparent;
+  border-color: var(--corSecundaria) transparent;
 }
 
-.depoimentos-info {
+.testimonials-info {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
@@ -293,21 +294,101 @@ header {
   align-items: center;
 }
 
-.depoimentos-info .avatar {
+.testimonials-info .avatar {
   width: 90px;
   transition: all 500ms;
 }
-.depoimentos-info .avatar:hover {
+.testimonials-info .avatar:hover {
   transform: scale(1.05);
 }
-.depoimentos-info strong {
+.testimonials-info strong {
   font-size: 1.2rem;
   font-weight: 400;
   margin-top: 10px;
 }
 
-.depoimentos-info span {
+.testimonials-info span {
   font-weight: 200;
   font-size: 0.8rem;
   margin-top: 0;
+}
+/* *************************************CTA**************************** */
+
+.cta-container {
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--corSecundaria);
+  color: var(--corPrimaria);
+}
+.cta-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+.form-container {
+  padding: 40px 70px;
+  background-color: rgb(80, 13, 9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  color: var(--branco);
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 2px solid rgba(100, 100, 100, 0.2);
+  width: 100%;
+  margin-top: 30px;
+  padding: 5px 0;
+}
+
+.form-group input,
+select {
+  display: block;
+  width: 100%;
+  outline: none;
+  font-size: 1.3rem;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  color: #ccc;
+}
+.form-group input::placeholder,
+select::placeholder {
+  color: #ccc;
+}
+
+.btn-submit {
+  padding: 20px 70px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: var(--corTerciaria);
+  border-radius: 100px;
+  margin-top: 30px;
+  color: var(--branco);
+  border: none;
+  transition: all 500ms;
+}
+
+.btn-submit:hover {
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+}
+.btn-submit:active {
+  transform: translateY(-1px);
 }
