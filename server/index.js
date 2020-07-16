@@ -9,7 +9,9 @@ const app = express();
 app.use(cors());
 app.use(express.json())
 
-
+app.get('/', (req, res) => {
+    res.json({ message: "Bem vindo" })
+});
 
 app.post('/subscribe', async (req, res) => {
 
@@ -47,4 +49,4 @@ app.post('/subscribe', async (req, res) => {
 })
 
 
-app.listen(3333, () => console.log('Sever up on port: http://localhost:3333'))
+app.listen((process.env.PORT || 3333), () => console.log('Sever up on port: ' + process.env.PORT))

@@ -1,5 +1,5 @@
 
-
+const apiURL = "https://macamordida-server.herokuapp.com/subscribe" // "http://localhost:3333/subscribe";
 const form = document.querySelector('form');
 const formTitle = document.querySelector('.form-title');
 const formSubTitle = document.querySelector('.form-sub-title');
@@ -25,7 +25,7 @@ form.addEventListener('submit', (event) => {
             phone,
         }
 
-        fetch("http://localhost:3333/subscribe",
+        fetch(apiURL,
             {
                 method: 'POST',
                 body: JSON.stringify(user),
