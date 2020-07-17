@@ -19,4 +19,4 @@ Fazer uma apresentaçãoa simples e objetiva da loja e cadastrar os interessados
 
 #### Demo
 
-<https://thiagomagano.github.io/lojamacamordida2/>
+<https://lojamacamordida.netlify.app/>
