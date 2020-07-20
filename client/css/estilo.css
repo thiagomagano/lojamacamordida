@@ -19,6 +19,14 @@ body {
   overflow-y: hidden;
   font-family: "bebas neue", sans-serif;
 }
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .main-container {
   width: 100%;
@@ -396,3 +404,87 @@ select::placeholder {
 .form-container {
   transition: all 500ms;
 }
+
+/* ***************************FOOTER**********************/
+footer {
+  color: #dfd2d2;
+  background-color: #b56868;
+}
+footer h3 {
+  font-size: 2rem;
+  color: #fff;
+}
+.footer-container {
+  display: grid;
+  min-height: 80vh;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 2% 5%;
+}
+.adress,
+.social-media,
+.contact,
+.img-fachada {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-bottom: 110px;
+  margin-top: 50px;
+}
+
+.contact li a {
+  font-size: 1.3rem;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: all 500ms;
+}
+.contact li a:hover {
+  color: var(--corPrimaria);
+  transform: scale(1.1);
+}
+#frist {
+  margin-top: 0;
+}
+.contact li span {
+  margin-left: 5px;
+}
+.small {
+  font-size: 20px;
+  margin-left: 0;
+}
+.contact li i {
+  font-size: 2rem;
+}
+.adress .img-fachada img {
+  width: 80%;
+  margin: 30px 0;
+  object-fit: contain;
+  border-radius: 1%;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.5);
+  opacity: 0.8;
+  transition: all 500ms;
+}
+
+.adress .img-fachada img:hover {
+  opacity: 1;
+}
+
+.develop-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #eee;
+  color: rgb(138, 125, 125);
+}
+/* .develop-by p {
+  margin-left: 52px;
+} */
