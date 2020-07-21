@@ -407,12 +407,13 @@ select::placeholder {
 
 /* ***************************FOOTER**********************/
 footer {
-  color: #dfd2d2;
-  background-color: #b56868;
+  color: var(--corPrimaria);
+  background-color: #fff;
 }
 footer h3 {
   font-size: 2rem;
-  color: #fff;
+  color: var(--corPrimaria);
+  text-transform: uppercase;
 }
 .footer-container {
   display: grid;
@@ -454,11 +455,12 @@ footer h3 {
   display: flex;
 }
 .contact-link {
-  color: #fff;
+  color: var(--corPrimaria);
+  filter: hue-rotate(20deg);
   transition: all 500ms;
 }
 .contact-link:hover {
-  color: var(--corPrimaria);
+  color: var(--corTerciaria);
   transform: scale(1.1);
 }
 .helper {
