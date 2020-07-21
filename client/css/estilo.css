@@ -273,7 +273,8 @@ header {
 
 .baloon {
   color: var(--corPrimaria);
-  height: 200px;
+  height: 100%;
+  text-align: center;
   width: 250px;
   padding: 20px;
   border-radius: 3px;
@@ -345,6 +346,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .cta-headline img {
   width: 80%;
@@ -388,11 +390,11 @@ select {
   border: none;
   box-shadow: none;
   background: transparent;
-  color: #ccc;
+  color: #fff;
 }
 .form-group input::placeholder,
 select::placeholder {
-  color: #ccc;
+  color: #aaa;
 }
 
 .btn-submit {
@@ -404,12 +406,12 @@ select::placeholder {
   margin-top: 30px;
   color: var(--branco);
   border: none;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
   transition: all 500ms;
 }
 
 .btn-submit:hover {
   transform: scale(1.1);
-  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
 }
 .btn-submit:active {
   transform: translateY(-1px);
@@ -431,28 +433,19 @@ footer h3 {
 }
 .footer-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-auto-rows: auto;
   grid-template-areas:
-    "fale visite siga"
-    "social fachada feed"
-    "social fachada feed"
-    "social fachada feed"
-    "txt-social txt-fachada txt-feed";
-  padding: 4% 5% 1% 5%;
+    "fale visite"
+    "social fachada"
+    "social fachada"
+    "social fachada"
+    "txt-social txt-fachada";
+  padding: 4% 10% 1%;
 }
 
-.siga {
-  text-align: center;
-}
 .fale {
   grid-area: fale;
-}
-.visite {
-  grid-area: visite;
-}
-.siga {
-  grid-area: siga;
 }
 .social {
   grid-area: social;
@@ -477,6 +470,16 @@ footer h3 {
 .helper {
   color: #aaa9a9;
 }
+.txt-social {
+  grid-area: txt-social;
+}
+.txt-social img {
+  width: 60%;
+}
+.visite {
+  grid-area: visite;
+  text-align: center;
+}
 .fachada {
   grid-area: fachada;
   width: 100%;
@@ -485,39 +488,21 @@ footer h3 {
   align-items: center;
 }
 .fachada img {
-  width: 25rem;
+  width: 22rem;
+  /* height: 100%; */
   object-fit: contain;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
   opacity: 0.8;
   transition: all 500ms;
+  text-align: center;
+  /* margin: 30px 0 30px 130px; */
 }
 .fachada img:hover {
   opacity: 1;
-  transform: scale(1.03);
-}
-
-.feed {
-  grid-area: feed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 500ms;
-}
-.feed:hover {
-  transform: scale(1.03);
-}
-
-.txt-social {
-  grid-area: txt-social;
-}
-.txt-social img {
-  width: 60%;
+  transform: scale(1.02);
 }
 .txt-fachada {
   grid-area: txt-fachada;
-}
-.txt-feed {
-  grid-area: txt-feed;
   text-align: center;
 }
 
@@ -537,7 +522,7 @@ footer h3 {
   color: #222;
 }
 
-/* responsive */
+/***************************** responsive ********************************************************/
 @media screen and (max-width: 500px) {
   :root {
     font-size: 13px;
@@ -545,12 +530,41 @@ footer h3 {
   header {
     clip-path: none;
   }
+  .cta-container {
+    padding-bottom: 50px;
+  }
   .cta-headline {
     align-items: center;
+    margin: 0 0 20px;
+  }
+  .form-container {
+    padding: 20px 25px;
+  }
+  .form-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .form-group {
+    border-bottom: 2px solid rgba(100, 100, 100, 0.2);
+    margin-top: 10px;
+    padding: 5px 0;
+  }
+
+  .form-group input,
+  select {
+    font-size: 1.2rem;
+    margin-top: 6px;
   }
   .btn-submit {
-    margin-left: 35px;
+    margin: 20px 0 10px;
+    font-size: 1.3rem;
+    padding: 10px 50px;
   }
+}
+
+@media screen and (max-width: 900px) {
   .footer-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -583,27 +597,12 @@ footer h3 {
   }
   .social ul li {
     margin-bottom: 15px;
-    justify-content: space-between;
-    align-items: space-between;
+    justify-content: start;
+    align-items: center;
     /* margin-left: 50px; */
   }
-
-  .siga,
-  .feed,
-  .txt-feed {
-    display: none;
+  .social {
+    justify-content: center;
+    align-items: center;
   }
-  /* .main-headline {
-    font-size: 3rem;
-  }
-  .sub-headline {
-    font-size: 0.7rem;
-  }
-
-  .container-beneficios h2 {
-    font-size: 1.3rem;
-  }
-  .container-beneficios ul li strong {
-    font-size: 1rem;
-  } */
 }
