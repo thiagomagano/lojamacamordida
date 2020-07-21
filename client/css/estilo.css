@@ -5,6 +5,7 @@
   --branco: #eee;
   --preto: #222;
   --txt-rosa: #ec5757;
+  --RosaShock: #ec1c1c;
 }
 
 * {
@@ -12,11 +13,10 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   color: var(--branco);
   line-height: 1.7;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   font-family: "bebas neue", sans-serif;
 }
 ul,
@@ -31,25 +31,25 @@ a {
 .main-container {
   width: 100%;
   height: 100%;
-  position: absolute;
-
-  overflow-y: scroll;
+  max-width: 1400px;
+  /* position: absolute; */
+  /* overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory; */
 }
 
 header {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
+  height: 100vh;
   background-image: linear-gradient(
       90deg,
       rgba(99, 14, 10, 0.8) 0%,
       rgba(153, 14, 8, 0.8) 100%
     ),
     url("../images/background-cover.jpg");
-  height: 100vh;
   position: relative;
   text-align: center;
 }
@@ -91,6 +91,7 @@ header {
   animation: moveInRight 1s;
 }
 
+/* intro animations */
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -172,61 +173,65 @@ header {
 /************************************Sessão 2 apresentação ********************************************************/
 
 .container-beneficios {
-  padding: 0 7%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  padding: 2% 7%;
+  text-align: center;
   color: var(--corPrimaria);
+  height: 100%;
+  width: 100%;
+}
+.container-beneficios h2 {
+  margin-bottom: 30px;
+  font-size: 3rem;
 }
 
-.head-beneficios {
-  grid-area: head;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
 .container-beneficios ul {
   display: flex;
   flex-direction: row;
-  list-style: none;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  list-style: none;
+  height: 100%;
 }
 .container-beneficios ul li {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 20px;
-  margin: 0 50px 20px;
-}
-.container-beneficios ul li strong {
-  text-align: center;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  padding: 0 10px 0;
+  margin: 30px 20px 10px;
+  flex: 1;
+  height: 100%;
+  min-width: 300px;
 }
 .container-beneficios ul li img {
-  width: 10rem;
-  margin-bottom: 10px;
+  width: 40%;
+  object-fit: contain;
+  /* margin-bottom: 10px; */
   transition: all 500ms;
+  flex: 1;
+  display: block;
 }
 .container-beneficios ul li img:hover {
   transform: scale(1.1);
 }
+.container-beneficios ul li strong {
+  text-align: center;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  /* margin-bottom: 5px; */
+  /* margin-top: 10px; */
+  flex: 1;
+}
 
 .container-beneficios ul li p {
   color: var(--txt-rosa);
-  line-height: 1.8;
+  font-size: 0.7rem;
+  line-height: 1.5;
   letter-spacing: 1px;
+  flex: 1;
 }
 
 /* SEÇÃO DIFERENCIAIS */
@@ -239,17 +244,22 @@ header {
   color: var(--corSecundaria);
 }
 
-/*********************************** depoimentos ****************************************/
+/*********************************** Testimonials ****************************************/
 .testimonials-container {
-  height: 100vh;
   padding: 3% 10%;
   background-color: var(--branco);
   color: var(--corPrimaria);
 }
+.testimonials-container h2 {
+  font-size: 2.3rem;
+}
+
 .testimonials-box {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 350px;
   padding: 2% 0 0;
 }
 .testimonials-item {
@@ -320,31 +330,35 @@ header {
   font-size: 0.8rem;
   margin-top: 0;
 }
-/* *************************************CTA**************************** */
+/* *************************************CTA FORM**************************** */
 
 .cta-container {
-  height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   background-color: var(--corSecundaria);
   color: var(--corPrimaria);
+  padding: 4% 8%;
 }
 .cta-headline {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+.cta-headline img {
+  width: 80%;
+  object-fit: contain;
 }
 
 .hidden {
   display: none;
 }
 .form-container {
-  padding: 40px 70px;
+  padding: 3.5% 5%;
   background-color: rgb(80, 13, 9);
   border-radius: 10px;
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.7);
   color: var(--branco);
 }
 
@@ -417,8 +431,6 @@ footer h3 {
 }
 .footer-container {
   display: grid;
-  /* min-height: 80vh;
-  max-height: 100vh; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: auto;
   grid-template-areas:
@@ -427,8 +439,7 @@ footer h3 {
     "social fachada feed"
     "social fachada feed"
     "txt-social txt-fachada txt-feed";
-  gap: 30px 10px;
-  padding: 4% 5% 3% 5%;
+  padding: 4% 5% 1% 5%;
 }
 
 .siga {
@@ -474,7 +485,7 @@ footer h3 {
   align-items: center;
 }
 .fachada img {
-  width: 100%;
+  width: 25rem;
   object-fit: contain;
   box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
   opacity: 0.8;
@@ -525,6 +536,74 @@ footer h3 {
   font-size: 1.1rem;
   color: #222;
 }
-/* .develop-by p {
-  margin-left: 52px;
-} */
+
+/* responsive */
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 13px;
+  }
+  header {
+    clip-path: none;
+  }
+  .cta-headline {
+    align-items: center;
+  }
+  .btn-submit {
+    margin-left: 35px;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+      "visite"
+      "fachada"
+      "fachada"
+      "txt-fachada"
+      "fale"
+      "social"
+      "social"
+      "txt-social";
+    padding: 25px 30px 0;
+  }
+
+  .visite,
+  .txt-fachada,
+  .fale,
+  .fachada {
+    text-align: center;
+    padding: 0 0 20px;
+  }
+  .social {
+    margin-top: 0;
+  }
+  .txt-social {
+    padding: 5px;
+    text-align: center;
+  }
+  .social ul li {
+    margin-bottom: 15px;
+    justify-content: space-between;
+    align-items: space-between;
+    /* margin-left: 50px; */
+  }
+
+  .siga,
+  .feed,
+  .txt-feed {
+    display: none;
+  }
+  /* .main-headline {
+    font-size: 3rem;
+  }
+  .sub-headline {
+    font-size: 0.7rem;
+  }
+
+  .container-beneficios h2 {
+    font-size: 1.3rem;
+  }
+  .container-beneficios ul li strong {
+    font-size: 1rem;
+  } */
+}
