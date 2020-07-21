@@ -14,7 +14,6 @@ Fazer uma apresentaçãoa simples e objetiva da loja e cadastrar os interessados
 
 * NodeJS
 * Express
-* MongoDB (noSQL)
 * API RESTful (MailChimp)
 
 #### Demo
