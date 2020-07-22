@@ -289,10 +289,13 @@ header {
 
 .baloon p {
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2;
   letter-spacing: 1px;
   font-family: "lora";
+}
+.baloon p.testimonial-big-text {
+  font-size: 0.7rem;
 }
 .baloon:after {
   /* transform: translateY(20px); */
