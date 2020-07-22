@@ -18,4 +18,4 @@ Fazer uma apresentaçãoa simples e objetiva da loja e cadastrar os interessados
 
 #### Demo
 
-<https://lojamacamordida.netlify.app/>
+<https://lojamacamordida.com.br/>

@@ -395,6 +395,9 @@ select {
   background: transparent;
   color: #fff;
 }
+option {
+  background-color: var(--corPrimaria);
+}
 .form-group input::placeholder,
 select::placeholder {
   color: #aaa;
