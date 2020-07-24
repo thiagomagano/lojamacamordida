@@ -88,7 +88,6 @@ header {
   font-weight: 700;
   display: block;
   margin-bottom: 60px;
-
   animation: moveInRight 1s;
 }
 
@@ -188,7 +187,7 @@ header {
 .container-beneficios ul {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-around;
   align-items: center;
   text-align: center;
