@@ -16,7 +16,7 @@ form.addEventListener('submit', (event) => {
     if (name.trim() && email.trim()) {
         form.style.display = 'none';
         formTitle.textContent = 'Muito Obrigado!';
-        formSubTitle.textContent = 'Estamos ansiosos para lhe conhecer.';
+        formSubTitle.textContent = 'Estamos ansiosas para lhe conhecer 🥰';
 
         const user = {
             name,
